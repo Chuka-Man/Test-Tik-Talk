@@ -2,11 +2,13 @@ import {Component, inject} from '@angular/core';
 import {ProfileCard} from '../../common-ui/profile-card/profile-card';
 import {ProfileServices} from '../../data/services/profile.services';
 import {Profile} from '../../data/interfaces/profile.interfaces';
+import {ProfileFilters} from './profile-filters/profile-filters';
 
 @Component({
   selector: 'app-search-page',
   imports: [
-    ProfileCard
+    ProfileCard,
+    ProfileFilters
   ],
   templateUrl: './search-page.html',
   styleUrl: './search-page.scss',

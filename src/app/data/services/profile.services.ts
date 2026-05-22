@@ -47,6 +47,16 @@ export class ProfileServices {
 
      )
    }
+
+   uploadAvatar(file: File)  {
+
+    const fd = new FormData();
+    fd.append('image', file);
+     return this.http.post<Profile>(
+       `${this.baseApUrl}/account/upload_image`,
+       fd
+     )
+   }
 }
 
 
